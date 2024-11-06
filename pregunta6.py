@@ -30,3 +30,30 @@ En ingeniería matemática, es común que necesitemos intercambiar diferentes al
 Se le pide que implemente este escenario utilizando el patrón de diseño estrategia. Debe proporcionar una estructura que permita cambiar fácilmente el método de integración. Incluya al menos dos métodos específicos (por ejemplo, Trapecio y Simpson) y demuestre cómo se podrían cambiar estos métodos en tiempo de ejecución.
 """
 
+class Shape():
+    def calcular_area(self):
+        pass
+
+class Circle(Shape):
+    def __init__(self, radius=1):
+        self.radius = radius
+
+    def calcular_area(self):
+        return 3.14159 * self.radius * self.radius
+
+class Square(Shape):
+    def __init__(self, side=1):
+        self.side = side
+
+    def calcular_area(self):
+        return self.side * self.side
+
+class AreaCalculator:
+    def __init__(self, shapes):
+        self.shapes = shapes
+
+    def total_area(self):
+        total = 0
+        for shape in self.shapes:
+            total += shape.calcular_area()
+        return total
