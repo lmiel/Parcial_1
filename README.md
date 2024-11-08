@@ -1,4 +1,5 @@
 # Parcial_1
+Link GitHub: https://github.com/lmiel/Parcial_1.git
 # Pregunta 1 (1 Punto):
 
 Explique en detalle el principio SOLID "Open/Closed" y proporcione un ejemplo de código en Python donde este principio se ha violado y cómo puede corregirlo.
