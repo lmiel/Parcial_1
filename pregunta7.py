@@ -35,3 +35,13 @@ class Integrador:
 def funcion_ejemplo(x):
     return x**2
 
+if __name__ == "__main__":
+    integrador = Integrador(EstrategiaTrapecio())
+    
+    resultado_t = integrador.calcular_integral(funcion_ejemplo, 0, 1, 1000)
+    print(f"Resultado con estrategia trapecio: {resultado_t}")
+    
+    integrador.set_estrategia(EstrategiaSimpson())
+    
+    resultado_s = integrador.calcular_integral(funcion_ejemplo, 0, 1, 1000)
+    print(f"Resultado con estrategia simpson: {resultado_s}")```
